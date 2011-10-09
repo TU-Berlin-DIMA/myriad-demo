@@ -2,30 +2,33 @@
 # Additional makefile targets
 ################################################################################
 
+# project-specific variables
+MYRIAD_DGEN_NAME = graphgen
+
 # include the following files in the package
 # ./config/*properties  -- properties config files
 # ./config/*xml         -- xml config files
-CONFIG_FILES  = $(shell cd ../src && ls config/*properties)
-CONFIG_FILES += $(shell cd ../src && ls config/*xml)
-CONFIG_FILES += $(shell cd ../vendor/myriad/src && ls config/*xsd)
-CONFIG_FILES += config/$(MYRIAD_DGEN_NAME)-frontend.template.xml
+CONFIG_FILES     = $(shell cd ../src && ls config/*properties)
+CONFIG_FILES    += $(shell cd ../src && ls config/*xml)
+CONFIG_FILES    += $(shell cd ../vendor/myriad/src && ls config/*xsd)
+CONFIG_FILES    += config/$(MYRIAD_DGEN_NAME)-frontend.template.xml
 
 # script files
-SCRIPT_FILES  = bin/$(MYRIAD_DGEN_NAME)-frontend
-SCRIPT_FILES += bin/$(MYRIAD_DGEN_NAME)-kill
+SCRIPT_FILES     = bin/$(MYRIAD_DGEN_NAME)-frontend
+SCRIPT_FILES    += bin/$(MYRIAD_DGEN_NAME)-kill
 
 # python files & dirs
-PYTHON_DIRS   = $(shell cd ../vendor/myriad/src/python && find -mindepth 1 -type d | grep -v '\.svn' | sed 's/^.\//lib\/python\/vendor\//')
-PYTHON_FILES  = $(shell cd ../vendor/myriad/src/python && find -type f | grep -v '\.svn' | sed 's/^.\//lib\/python\/vendor\//')
+PYTHON_DIRS      = $(shell cd ../vendor/myriad/src/python && find -mindepth 1 -type d | grep -v '\.svn' | sed 's/^.\//lib\/python\/vendor\//')
+PYTHON_FILES     = $(shell cd ../vendor/myriad/src/python && find -type f | grep -v '\.svn' | sed 's/^.\//lib\/python\/vendor\//')
 
 # All Target
-all: work-dirs script-files config-files lib-misc lib-poco CHANGELOG LICENSE NOTICE README bin/$(MYRIAD_DGEN_NAME)-node
+all: work-dirs script-files config-files lib-misc lib-poco CHANGELOG LICENSE NOTICE bin/$(MYRIAD_DGEN_NAME)-node
 
 cleanall: clean
 	rm -Rf bin
 	rm -Rf config
 	rm -Rf lib
-	rm -Rf CHANGELOG LICENSE NOTICE README VERSION
+	rm -Rf CHANGELOG LICENSE NOTICE
 
 install: 
 	mkdir -p $(MYRIAD_INSTALL_DIR)
@@ -35,8 +38,6 @@ install:
 	cp CHANGELOG $(MYRIAD_INSTALL_DIR)
 	cp LICENSE $(MYRIAD_INSTALL_DIR)
 	cp NOTICE $(MYRIAD_INSTALL_DIR)
-	cp README $(MYRIAD_INSTALL_DIR)
-	cp VERSION $(MYRIAD_INSTALL_DIR)
 
 work-dirs: 
 	@echo 'Creating directory hierarchy'
@@ -99,10 +100,6 @@ LICENSE: ../LICENSE
 	cp $< $@
 
 NOTICE: ../NOTICE
-	@echo 'Processing: $@'
-	cp $< $@
-
-README: ../README
 	@echo 'Processing: $@'
 	cp $< $@
 
