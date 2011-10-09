@@ -1,0 +1,14 @@
+# ignore the user-specific build setup settings (makefile.defs)
+makefile.defs
+
+# ignore *.o and *.d files in the build folder
+build/**/*.o
+build/**/*.d
+
+# ignore build artifacts
+build/bin
+build/config
+build/lib
+build/CHANGELOG
+build/LICENSE
+build/NOTICE
