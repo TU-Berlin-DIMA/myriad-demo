@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/9001-cas/!svn/ver/812/myriad/trunk/myriad-demo/src/cpp/generator
+END
+GeneratorSubsystem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/9001-cas/!svn/ver/812/myriad/trunk/myriad-demo/src/cpp/generator/GeneratorSubsystem.cpp
+END
+UserGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/9001-cas/!svn/ver/812/myriad/trunk/myriad-demo/src/cpp/generator/UserGenerator.h
+END
+UserConnectionsGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/9001-cas/!svn/ver/812/myriad/trunk/myriad-demo/src/cpp/generator/UserConnectionsGenerator.h
+END
