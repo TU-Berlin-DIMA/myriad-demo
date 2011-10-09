@@ -1,0 +1,3 @@
+[submodule "vendor/myriad"]
+	path = vendor/myriad
+	url = git@github.com:TU-Berlin-DIMA/myriad.git
