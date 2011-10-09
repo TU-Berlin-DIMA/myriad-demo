@@ -3,10 +3,6 @@ Copyright 2010-2011 DIMA Research Group, TU Berlin
 
 This product depends on the POCO C++ libraries (http://pocoproject.org).
 
-This product includes the RngStream C++ component developed by by Pierre 
-L'Ecuyer.
-Copyright (c) 2001-2011 Pierre L'Ecuyer
-
 This product includes the TextSub Python component developed by Xavier Defrang 
 and alane@sourceforge.net.
 Copyright (c) 2001-2011 Xavier Defrang

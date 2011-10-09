@@ -210,12 +210,3 @@ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
 FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
-
-
-For the RngSteam.cpp component:
-
-Copyright: Pierre L'Ecuyer, University of Montreal
-
-This code can be used freely for personal, academic, or non-commercial 
-purposes. For commercial purposes, please contact P. L'Ecuyer at: 
-lecuyer@iro.umontreal.ca.
