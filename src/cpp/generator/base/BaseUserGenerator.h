@@ -55,7 +55,7 @@ public:
 
 		if (stage.name() == "default")
 		{
-			registerTask(new RandomSetDefaultGeneratingTask<User> (*this));
+			registerTask(new RandomSetDefaultGeneratingTask<User> (*this, _config));
 		}
 	}
 

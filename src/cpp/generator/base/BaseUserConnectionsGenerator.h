@@ -51,7 +51,7 @@ public:
 
 		if (stage.name() == "default")
 		{
-			registerTask(new RandomSetDefaultGeneratingTask<UserConnections> (*this));
+			registerTask(new RandomSetDefaultGeneratingTask<UserConnections> (*this, _config));
 		}
 	}
 
