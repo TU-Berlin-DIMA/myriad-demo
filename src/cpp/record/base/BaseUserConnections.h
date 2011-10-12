@@ -121,12 +121,6 @@ inline const I32u& BaseUserConnections::connectionsCardinality() const
 
 namespace Myriad {
 
-// forward declaration of GeneratorOutputStream
-class MyriadOutputStream;
-
-// forward declaration of operator<<
-MyriadOutputStream& operator<<(MyriadOutputStream& out, const GraphGen::UserConnections& record);
-
 // record traits specialization
 template<> struct RecordTraits<GraphGen::UserConnections>
 {
@@ -134,6 +128,9 @@ template<> struct RecordTraits<GraphGen::UserConnections>
 	typedef GraphGen::UserConnectionsHydratorChain HydratorChainType;
 };
 
-} // namespace GraphGen
+// forward declaration of operator<<
+OutputCollector::StreamType& operator<<(OutputCollector::StreamType& out, const GraphGen::UserConnections& record);
+
+} // namespace Myriad
 
 #endif /* BASEUSERCONNECTIONS_H_ */

@@ -124,18 +124,15 @@ inline const String& BaseUser::username() const
 
 namespace Myriad {
 
-// forward declaration of GeneratorOutputStream
-class MyriadOutputStream;
-
-// forward declaration of operator<<
-MyriadOutputStream& operator<<(MyriadOutputStream& out, const GraphGen::User& record);
-
 // record traits specialization
 template<> struct RecordTraits<GraphGen::User>
 {
 	typedef GraphGen::UserGenerator GeneratorType;
 	typedef GraphGen::UserHydratorChain HydratorChainType;
 };
+
+// forward declaration of operator<<
+OutputCollector::StreamType& operator<<(OutputCollector::StreamType& out, const GraphGen::User& record);
 
 // methods for gender type
 inline std::string toString(const GraphGen::Gender& t)

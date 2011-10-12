@@ -23,7 +23,7 @@
 
 namespace Myriad {
 
-MyriadOutputStream& operator<<(MyriadOutputStream& out, const GraphGen::User& record)
+OutputCollector::StreamType& operator<<(OutputCollector::StreamType& out, const GraphGen::User& record)
 {
 	out <<
 	"{\n"														<<
@@ -36,7 +36,7 @@ MyriadOutputStream& operator<<(MyriadOutputStream& out, const GraphGen::User& re
 	return out;
 }
 
-MyriadOutputStream& operator<<(MyriadOutputStream& out, const GraphGen::UserConnections& record)
+OutputCollector::StreamType& operator<<(OutputCollector::StreamType& out, const GraphGen::UserConnections& record)
 {
 	out <<
 														   "{\n"	<<
