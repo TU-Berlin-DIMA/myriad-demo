@@ -1,0 +1,4 @@
+# ignore *.o and *.d files in the build folder
+*.o
+*.d
+
