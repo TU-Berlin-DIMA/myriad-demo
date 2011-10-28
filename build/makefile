@@ -8,7 +8,6 @@ RM := rm
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include subdir.mk
 -include vendor/myriad/src/cpp/math/random/subdir.mk
 -include vendor/myriad/src/cpp/math/probability/subdir.mk
 -include vendor/myriad/src/cpp/io/subdir.mk
@@ -19,6 +18,7 @@ RM := rm
 -include src/cpp/io/subdir.mk
 -include src/cpp/generator/subdir.mk
 -include src/cpp/core/subdir.mk
+-include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

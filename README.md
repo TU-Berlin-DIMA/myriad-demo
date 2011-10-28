@@ -249,3 +249,4 @@ If the installation is successful, you should see the installed POCO Libraries u
     $POCO_PATH/libPocoXMLd.so.11
     $POCO_PATH/libPocoXML.so
     $POCO_PATH/libPocoXML.so.11
+
